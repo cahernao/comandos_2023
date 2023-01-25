@@ -1,7 +1,7 @@
 # COMANDOS GIT - GITHUB
 Este apartado tiene contempado tener los comandos de git y funcionalidades para futura referencia
 
-[TOC]
+[TOCM]
 
 ## Instalación de git 
 Estos son los primeros comandos que debemos usar cuando vamos a usar en nuestra nueva terminal cuando vayamos a trabajar a github
