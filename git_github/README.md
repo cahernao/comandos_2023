@@ -1,6 +1,40 @@
 # COMANDOS GIT - GITHUB
 Este apartado tiene contempado tener los comandos de git y funcionalidades para futura referencia
 
+[TOC]
+
+## Instalación de git 
+Estos son los primeros comandos que debemos usar cuando vamos a usar en nuestra nueva terminal cuando vayamos a trabajar a github
+
+lo primero que debemos hacer es actualizar el sistema
+
+```
+sudo apt-get update
+sudp apt-get upgrade
+```
+Luego instalamos git con la siguiente linea
+```
+sudo apt-get install git
+```
+Con eso ya estariamos, para probar, podemos hacer el siguiente codigo de ejemplo
+```
+git --version
+```
+
+# Login
+Cuando tenemos que loguearnos en una terminal, podemos hacerlo de manera que establezcamos variables globales y estas ya no se nos pida cuando mandemos un cambio a un repositorio
+
+Debemos usar los siguientes comandos
+```
+git config --global user.name "nombre"
+```
+
+```
+git config --global user.email "nombre@example.com"
+```
+
+una vez completado los pasos podemos continuar con los cambios de un repositorio
+
 
 ### Repositorio existente
 Cuando tenemos un repositorio y queremos hacer una copia es fácil, primero debemos crear una carpeta donde guardaremos el repositorio:
@@ -56,5 +90,6 @@ Mas adelante veremos como iniciar sesion, en mi caso al usar el doble factor deb
 
 # Creación token para comandos
 Cuando estamos en una nueva terminal necesitamos loguearnos, estas instrucciones funcionan solamente si tenemos activado el modo doble factor, ya que debemos crear desde nuestra cuenta tokens que nos ayuden a controlar mejor los permisos donde nos vayamos a loguear, de esto es más seguro y podemos controlar los permisos que le damos a los tokens. Las instrucciones son las siguientes
-[INSTRUCCIONES]
-(https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+[INSTRUCCIONES](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
