@@ -93,3 +93,45 @@ Cuando estamos en una nueva terminal necesitamos loguearnos, estas instrucciones
 
 [INSTRUCCIONES](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
+# Hacer pull con cambios
+
+Si queremos un update del repositorio pero tenemos cambios que no hemos hecho commit, podemos deshacerlos
+pero se debe tener cuidado que los cambios se revertiran y  no podran recuperarse
+
+
+First, update all origin/<branch> refs to latest:
+
+```
+git fetch --all
+```
+Backup your current branch (e.g. master):
+
+```
+git branch backup-master
+```
+
+Jump to the latest commit on origin/master and checkout those files:
+
+```
+git reset --hard origin/master
+```
+Explanation:
+git fetch downloads the latest from remote without trying to merge or rebase anything.
+
+git reset resets the master branch to what you just fetched. The --hard option changes all the files in your working tree to match the files in origin/master.
+
+# Crear tokens para acceder a repositorios
+cuando mandamos un cambio o queremos hacer un pull muchos repositorios piden credenciales y la contraseña al no ser de uso porque se usa el codigo de autenticación, la contraseña no se usa
+
+se siguien las instrucciones:
+####Lista ordenada
+                
+1. Ver a ajustes de cuenta
+2. Ajustes de desarrollador (Developer Settings)
+3. Personal acces token
+4. Token classi
+
+Luego le colocamos un nombre y con ello lo copiamos y usamos donde el repositorio que se necesita usar, con ello ya podemos usar el comando como debe ser.
+
+Se recomienda eliminar el token poco después.
+                
