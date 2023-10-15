@@ -19,3 +19,10 @@ Podemos conocer la versión de kernel con el siguiente comando
 uname -a
 ```
 
+##### SSH
+
+Conectarse a una ssh, como una VM de GCLOUD
+
+```
+ssh -v user@ip
+```
