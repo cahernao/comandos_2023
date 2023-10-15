@@ -134,4 +134,10 @@ se siguien las instrucciones:
 Luego le colocamos un nombre y con ello lo copiamos y usamos donde el repositorio que se necesita usar, con ello ya podemos usar el comando como debe ser.
 
 Se recomienda eliminar el token poco después.
-                
+
+
+
+
+Comando para utilizar cuando se hace pull y push sincronizar y que no afecte cuando se usa VSCoda
+
+`git config pull.rebase false`
