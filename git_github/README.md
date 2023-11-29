@@ -124,7 +124,7 @@ git reset resets the master branch to what you just fetched. The --hard option c
 cuando mandamos un cambio o queremos hacer un pull muchos repositorios piden credenciales y la contraseña al no ser de uso porque se usa el codigo de autenticación, la contraseña no se usa
 
 se siguien las instrucciones:
-####Lista ordenada
+#### Lista ordenada
                 
 1. Ver a ajustes de cuenta
 2. Ajustes de desarrollador (Developer Settings)
