@@ -141,3 +141,39 @@ Se recomienda eliminar el token poco después.
 Comando para utilizar cuando se hace pull y push sincronizar y que no afecte cuando se usa VSCoda
 
 `git config pull.rebase false`
+
+
+# Crear ramas y hacer merge entre ellas
+
+ Actualizar la rama dev desde el repositorio remoto
+`git fetch origin`
+`git checkout dev`
+`git pull origin dev`
+
+ Crear una nueva rama local basada en dev y cambiar a ella
+`git checkout -b tu-rama dev`
+
+ Subir tu nueva rama local a GitHub
+`git push origin tu-rama`
+
+
+## Subiendo cambios a la rama local
+
+ Cambiar a tu rama local
+`git checkout tu-rama`
+
+ Actualizar la rama dev desde el repositorio remoto
+`git fetch origin`
+`git checkout dev`
+`git pull origin dev`
+
+ Fusionar la rama dev en tu rama local
+`git checkout tu-rama`
+`git merge dev`
+
+ Resolver conflictos si los hay, y luego
+`git add archivo_resuelto`
+`git commit`
+
+ Subir tu rama local a GitHub
+`git push origin tu-rama`
