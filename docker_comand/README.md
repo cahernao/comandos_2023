@@ -10,3 +10,25 @@ Cuando queremos levantar una imagen de docker con mysql y conectarnos con dbeave
 - Comando plantilla ``docker exec -it mysql-container mysql -u root -p nombre_de_la_base_de_datos``
 - Ejemplo de conectarse a la base de datos Hotel ``docker exec -it smysql mysql -u root -p Hotel``
 -  Pedira la contrasena, en el caso que sea la misma que creamos en el primer lugar luego ya estamos dentro
+
+
+### Bash de base de datos
+
+Derivado de la funcionalidad, mysql se encuentra en una imagen de linux, por la que nos podemos conectar,
+sin embargo existen muchas funcionalidades que debemos cumplir dentro de este contenedor (como algunos comandos)
+
+En este caso haremos el backup de una base de datos, con uso de **mysqldump**
+
+Con ello el conjunto de instrucciones es el siguiente:
+- Conectar el bash ``docker exec -it smysql bash``
+  - Aqui es importante que **smysql** sea el nombre del contenedor con mysql
+- Debe aparecer en la terminal _bash-4.4#_
+  - De no funcionar el bash ``docker exec -it smysql sh``
+- Crear el comando, en este caso un backup completo ``mysqldump -u root -p Hotel > /var/lib/mysql-files/backup_completo_logactividades1.sql``
+  - Pedira la contraseña
+
+**Extra**
+Si queremos copiar el documento a nuestro equipo _en este caso windows_
+- usamos docker ``docker cp smysql:/var/lib/mysql-files/backup_completo_logactividades1.sql "C:\..\..\backup_completo_logactividades1.sql"``
+  - Es imporante saber el contenedor, en este caso **smysql**
+
