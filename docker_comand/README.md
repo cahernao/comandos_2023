@@ -32,3 +32,11 @@ Si queremos copiar el documento a nuestro equipo _en este caso windows_
 - usamos docker ``docker cp smysql:/var/lib/mysql-files/backup_completo_logactividades1.sql "C:\..\..\backup_completo_logactividades1.sql"``
   - Es imporante saber el contenedor, en este caso **smysql**
 
+
+# DOCKER SQL SERVER Y DBEAVER
+Cuando queremos levantar una imagen de docker con sql server
+- ``docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourStrong!Passw0rd" -p 1433:1433 --name sql_server -d mcr.microsoft.com/mssql/server:2022-latest``
+  - Nota: puede que el contenedor no se levante por algun error, si tiene exit(255), verificar lo siguiente
+    - Logs: ``docker logs <contenedor_name>`` en este caso sql_server
+    - Contrasena: debe cumplir con los estandares: 8 caracteres, una mayuscula, un numero y un simbolo
+    - Acceptar los terminos y condiciones, por lo general es la variable ingresada ACCEPT_EULA
