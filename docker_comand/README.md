@@ -40,3 +40,12 @@ Cuando queremos levantar una imagen de docker con sql server
     - Logs: ``docker logs <contenedor_name>`` en este caso sql_server
     - Contrasena: debe cumplir con los estandares: 8 caracteres, una mayuscula, un numero y un simbolo
     - Acceptar los terminos y condiciones, por lo general es la variable ingresada ACCEPT_EULA
+
+
+# DOCKER Y REDIS
+Para conectar redis con docker usamos los comandos
+
+- ``docker run -d --name redis -p 6379:6379 redis/redis-stack-server:latest ``
+  - Nota: los siguientes paso no son secuenciales, si el comando de docker no funciona puede ser otro para conectarse
+- ``docker exec -it redis redis-cli``
+- ``winpty docker exec -it redis redis-cli``
