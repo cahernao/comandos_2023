@@ -177,3 +177,28 @@ Comando para utilizar cuando se hace pull y push sincronizar y que no afecte cua
 
  Subir tu rama local a GitHub
 `git push origin tu-rama`
+
+
+# Conflictos con cambios en nube, y con local
+Cuando tenemos conflictos al hacer merge con los cambios en linea y los locales, podemos utilizar cualquiera de los comandos
+
+To resolve this, you have a few options:
+
+If you're okay with potentially overwriting your local changes, you can force the pull:
+
+`git pull --ff-only origin main`
+
+This will only work if your local changes can be fast-forwarded.
+
+If you want to keep your local changes and merge them with the remote changes:
+
+`git pull --rebase origin main`
+
+This will attempt to reapply your local commits on top of the updated remote branch.
+
+If you want to see what changes are causing the conflict:
+
+`git fetch origin`
+`git diff main origin/main`
+
+This will show you the differences between your local main branch and the remote main branch.
